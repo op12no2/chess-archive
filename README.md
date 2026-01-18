@@ -1,2 +1,4 @@
 # chess-archive
-old and abandoned chess projects
+
+Old and abandoned chess projects.
+
