@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>elox</title>
+<link href="https://unpkg.com/tabulator-tables/dist/css/tabulator_site_dark.min.css" rel="stylesheet">
+<link href="./ui.css?nocache=1762853832844" rel="stylesheet">
+</head>
+<body>
+<div id="elox"></div>
+<script src="https://cdn.jsdelivr.net/npm/luxon/build/global/luxon.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+<script type="text/javascript" src="data.js?nocache=1762853832844"></script>
+<script type="text/javascript">
+const tagList=['misc','lang','search','eval',''];
+tagList.pop();
+const ratList=['ccrl40154','ccrl4015','ccrlblitz8','ccrlblitz','ccrlfrc','pohl15','pohleas','ip101','rbb324',''];
+ratList.pop();
+const tagSet=new Set(['misc','lang','search','eval','']);
+tagSet.delete('');
+const ratSet=new Set(['ccrl40154','ccrl4015','ccrlblitz8','ccrlblitz','ccrlfrc','pohl15','pohleas','ip101','rbb324','']);
+ratSet.delete('');
+Tabulator.extendModule("filter", "filters", {
+  "notlike": function(headerValue, rowValue, rowData, filterParams) {
+    if (!headerValue || !rowValue) return true;
+    headerValue = headerValue.toLowerCase();
+    rowValue = rowValue.toLowerCase();
+    return rowValue.includes(headerValue) ? false : true;
+  }
+});
+const table = new Tabulator("#elox", {
+  data: tabledata,
+  sortOrderReverse: true,
+  movableColumns: true,
+  layout: "fitData",
+  initialSort: [{column:"ccrl40154", dir:"desc"}],
+  columns: [
+    {title: "<a id='userdesc' href='https://github.com/op12no2/elox' target='_blank' style='color:inherit;text-decoration:none'>Elox updated on 11 Nov 2025 at 0937 UTC</a>", headerHozAlign: "center", columns: [
+      {title: "Misc", field: "misc", sorter: "string", headerFilter: "input", headerSortStartingDir: "desc"},
+{title: "Lang", field: "lang", sorter: "string", headerFilter: "input", headerSortStartingDir: "desc"},
+{title: "Search", field: "search", sorter: "string", headerFilter: "input", headerSortStartingDir: "desc"},
+{title: "Eval", field: "eval", sorter: "string", headerFilter: "input", headerSortStartingDir: "desc"},
+      {title: "Engine", field: "engine", sorter: "string", headerFilter: "input", headerSortStartingDir: "asc"},
+      {title: "", formatter: "rownum", headerSort: false},
+      {title: "<a href='https://computerchess.org.uk/ccrl/4040/' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>CCRL</a><br>40/15<br>4 Threads", field: "ccrl40154", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://computerchess.org.uk/ccrl/4040/' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>CCRL</a><br>40/15<br>1 Thread", field: "ccrl4015", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://computerchess.org.uk/ccrl/404/' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>CCRL</a><br>Blitz<br>8 Threads", field: "ccrlblitz8", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://computerchess.org.uk/ccrl/404/' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>CCRL</a><br>Blitz<br>1 Thread", field: "ccrlblitz", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://computerchess.org.uk/ccrl/404FRC/' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>CCRL</a><br>FRC<br>1 Thread", field: "ccrlfrc", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://www.sp-cc.de/index.htm' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>SPCC</a><br>Top 15<br>1 Thread", field: "pohl15", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://www.sp-cc.de/eas-ratinglist.htm' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>SPCC</a><br>EAS<br>1 Thread", field: "pohleas", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://ipmanchess.yolasite.com/r9-7945hx.php' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>Ipman</a><br>10+1<br>1 Thread", field: "ip101", sorter: "number", headerSortStartingDir: "desc"},
+{title: "<a href='https://e4e6.com/324/' target='_blank' style='color:inherit;text-decoration:none' onclick='event.stopPropagation()'>Chess 324</a><br>Top 15 RR<br>1 Thread", field: "rbb324", sorter: "number", headerSortStartingDir: "desc"},
+    ]}
+  ]
+});
+</script>
+<script type="text/javascript" src="ui.js?nocache=1762853832844"></script>
+</body>
+</html>

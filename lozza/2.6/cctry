@@ -1,0 +1,34 @@
+#!/bin/bash
+
+LD_LIBRARY_PATH=/home/xyzzy/cutechess-cli/lib
+export LD_LIBRARY_PATH
+
+mv cctry.pgn games/$RANDOM$RAMDOM.pgn
+
+tc="tc=0/60+1"
+
+e1="-engine conf=coal $tc"
+e2="-engine conf=coal $tc"
+
+threads=1
+
+m="-recover -concurrency $threads"
+
+t="-event soaktest -tournament round-robin -games 20000"
+
+r="-resign movecount=3 score=400"
+
+d="-draw movenumber=40 movecount=8 score=10"
+
+o="-repeat -srand $RANDOM -openings file=data/4moves_noob.epd format=epd order=random plies=16"
+
+f="-pgnout cctry.pgn fi"
+
+s="-sprt elo0=0 elo1=5 alpha=0.05 beta=0.05"
+
+v="-ratinginterval 10"
+
+echo $e1 $e2 $t $r $d $o $f $v $m $s
+
+../cutechess-cli/cutechess-cli $e1 $e2 $t $r $d $o $f $v $m $s
+

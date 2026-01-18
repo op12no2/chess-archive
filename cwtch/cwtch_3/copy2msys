@@ -1,0 +1,6 @@
+m=/mnt/c/msys64/home/op12n
+
+cp cwtch.c $m
+cp makefile $m
+cp weights.h $m
+cp build_all_win $m

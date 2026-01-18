@@ -1,0 +1,15 @@
+
+* {font-family: sans-serif;}
+html, body {height: 100%; margin: 0;}
+#elox {height: 100vh;}
+
+.tabulator .tabulator-row .tabulator-cell {
+  font-weight: normal !important;
+  color: #ccc !important;
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-title {
+  font-weight: 400 !important;
+  color: #fff;
+}
+

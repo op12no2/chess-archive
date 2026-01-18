@@ -1,0 +1,18 @@
+[
+{
+  "name": "coal",
+  "command": "node /home/xyzzy/lozza/lozza.js",
+  "protocol": "uci"
+},
+{
+  "name": "cand",
+  "command": "node /home/xyzzy/lozza/history/2.6/lozza.js",
+  "protocol": "uci"
+},
+{
+  "name": "last",
+  "command": "node /home/xyzzy/lozza/history/2.5/lozza.js",
+  "protocol": "uci"
+}
+]
+

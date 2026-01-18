@@ -1,0 +1,2 @@
+unix2dos ../weights.js
+cp ../weights.js /mnt/c/projects/lozza/data

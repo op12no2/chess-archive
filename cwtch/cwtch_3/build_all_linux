@@ -1,0 +1,20 @@
+m=/mnt/c/msys64/home/op12n
+
+make clean 
+make ARCH=x86-64 
+cp cwtch $m/cwtch_$1_linux_x86_64_generic 
+
+make clean 
+make ARCH=x86-64-v2 
+cp cwtch $m/cwtch_$1_linux_x86_64_v2 
+
+make clean 
+make ARCH=x86-64-v3 
+cp cwtch $m/cwtch_$1_linux_x86_64_v3 
+
+make clean 
+make ARCH=x86-64-v4 
+cp cwtch $m/cwtch_$1_linux_x86_64_v4
+
+make clean
+

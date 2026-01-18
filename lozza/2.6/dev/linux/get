@@ -1,0 +1,8 @@
+cp /mnt/c/projects/lozza/lozza26coal.js .
+dos2unix lozza26coal.js
+cp /mnt/c/projects/lozza/lozza26cand.js .
+dos2unix lozza26cand.js
+diff lozza26coal.js lozza26cand.js
+cp /mnt/c/projects/lozza/nntune.js .
+dos2unix nntune.js
+

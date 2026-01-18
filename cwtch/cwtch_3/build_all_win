@@ -1,0 +1,18 @@
+make clean 
+make ARCH=x86-64 
+mv cwtch.exe cwtch_$1_win_x86_64_generic.exe 
+
+make clean 
+make ARCH=x86-64-v2 
+mv cwtch.exe cwtch_$1_win_x86_64_v2.exe 
+
+make clean 
+make ARCH=x86-64-v3 
+mv cwtch.exe cwtch_$1_win_x86_64_v3.exe 
+
+make clean 
+make ARCH=x86-64-v4 
+mv cwtch.exe cwtch_$1_win_x86_64_v4.exe
+
+make clean
+

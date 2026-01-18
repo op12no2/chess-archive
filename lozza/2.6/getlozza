@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cp /mnt/c/projects/lozza/cctry cctry
+dos2unix cctry
+chmod +x cctry
+
+cp /mnt/c/projects/lozza/engines.json engines.json
+dos2unix engines.json
+
+cp /mnt/c/projects/lozza/lozza.js lozza.js
+dos2unix lozza.js
+
+cp /mnt/c/projects/lozza/history/2.6/lozza.js history/2.6/lozza.js
+dos2unix history/2.6/lozza.js
+
