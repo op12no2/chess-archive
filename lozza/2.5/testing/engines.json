@@ -1,0 +1,33 @@
+[
+{
+  "name": "coal",
+  "command": "node c:\\projects\\lozza\\trunk\\testing\\lozza.js",
+  "protocol": "uci"
+},
+{
+  "name": "cand",
+  "command": "node c:\\projects\\lozza\\trunk\\history\\3\\lozza.js",
+  "protocol": "uci"
+},
+{
+  "name": "loz25",
+  "command": "node c:\\projects\\lozza\\trunk\\history\\2.5\\release\\lozza.js",
+  "protocol": "uci"
+},
+{
+  "name": "loz24",
+  "command": "node c:\\projects\\lozza\\trunk\\history\\2.4\\release\\lozza.js",
+  "protocol": "uci"
+},
+{
+  "name": "tt51",
+  "command": "node c:\\projects\\lozza\\trunk\\testing\\engines\\tt.js",
+  "protocol": "uci"
+},
+{
+  "name": "leo23",
+  "command": "c:\\projects\\lozza\\trunk\\testing\\engines\\leorik-2.3.exe",
+  "protocol": "uci"
+}
+]
+
